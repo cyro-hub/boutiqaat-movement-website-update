@@ -8,6 +8,9 @@ body {
   background: #eeeeee;
   font-family: Arial, sans-serif;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 #root {
   padding: 10px 5px;
@@ -15,6 +18,9 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  display:grid;
+  margin: auto;
+  max-width: 400px;
 }
 .container {
   height: 100vh;
