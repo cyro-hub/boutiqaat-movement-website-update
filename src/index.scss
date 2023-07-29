@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeeee;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  padding: 10px 5px;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.container {
+  height: 100vh;
+  align-items: center;
+  padding: 0.5em 0;
+  scroll-snap-align: start;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    span {
+      color: #ad9032;
+      font-weight: 600;
+      text-align: -webkit-match-parent;
+    }
+  }
+  .content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.25em 5px;
+    margin-top: 1.5em;
+    div {
+      margin: 0.7em auto;
+    }
+    .qty {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-weight: 700;
+      }
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      label {
+        flex: 0.25;
+        font-weight: 550;
+      }
+      input {
+        flex: 0.75;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1.1em;
+      }
+    }
+    .handles_button {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      button {
+        margin: 5px 0;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: 1.15em;
+      }
+      button:nth-child(1) {
+        background-color: rgb(0, 0, 0);
+      }
+      button:nth-child(2) {
+        background-color: rgb(61, 199, 61);
+      }
+      button:nth-child(3) {
+        background-color: rgb(117, 117, 117);
+      }
+    }
+  }
+}
+.view_list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  input {
+    font-weight: 600;
+    text-align: -webkit-match-parent;
+    margin: 0.5em auto;
+    width: 90%;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  .bin_container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    .bin {
+      background-color: white;
+      margin: 0.25em auto;
+      padding: 10px;
+      border-radius: 10px;
+      .bin_items {
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: -10px;
+        li {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          margin: 10px auto;
+          a {
+            text-decoration: none;
+            font-weight: 500;
+          }
+          span {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}
